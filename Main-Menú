@@ -1,0 +1,71 @@
+package com.mycompany.main;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        String MarcaC[] = new String[2];
+        String ModeloC[] = new String[2];
+        String MarcaM[] = new String[2];
+        String ModeloM[] = new String[2];
+        int VelocidadMAximaC = 0 ;
+        int VElocidadMaximaM = 0;
+        int Motocicleta =0;
+        String marca = "";
+        String modelo = "";
+        int op = 0;
+        
+         
+        System.out.println("\n Buenas");
+        do {
+            System.out.println("------------------------------------------");
+            System.out.println("[1].- Ingresar datos del Coche " );
+            System.out.println("[2].- Ingresar datos de la Motocicleta ");
+            System.out.println("[3].- Mostrar Datos del Coche ");
+            System.out.println("[4].- Mostrar Datos de la Motocicleta ");
+            System.out.println("[5].- Salir]");
+            System.out.println("------------------------------------------");
+            op = entrada.nextInt();
+            switch(op){
+                case 1 :
+                    for (int i = 0; i < 2; i++) {
+                        System.out.println((i + 1) + " .- Marca del Coche: ");
+                        MarcaC[i] = entrada.nextLine(); 
+                        for (int j = 0; j < 2; j++) {
+                            System.out.println((j + 1) + ".- Modelo del Coche: ");
+                            ModeloC[j] = entrada.nextLine(); 
+                        }
+                    }
+                    Vehiculo Micoche = new Coche(marca,modelo);
+                    break;
+                case 2 :
+                    for (int i = 0; i < 2; i++) {
+                        System.out.println((i+1)+ " .- Marca de la Motocicleta ");
+                        MarcaC[i] = entrada.nextLine();
+                        entrada.next();
+                        for (int j = 0; j < 2; j++) {
+                            System.out.println((j+1)+ ".- Modelo de la Motocicleta");
+                            ModeloC[j] = entrada.nextLine();
+                            
+                        }    
+                    }
+                    break;
+                case 3 :
+                    
+                    break;
+                case 4 :
+                    
+                    break;
+                case 5 :
+                    
+                    break;
+                default:
+                    System.out.println(" Opción Incorrecta");
+            
+            }
+        } while (true);
+        
+    }
+}
