@@ -1,0 +1,11 @@
+package com.mycompany.main;
+
+public class Vehiculo {
+    private String marca ;
+    private String modelo;
+    private int VelocidadMaxima;
+    public void Mover(){
+        
+        System.out.println(" El Vehiculo está en movimiento");
+    }
+}
