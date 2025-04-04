@@ -1,27 +1,16 @@
 package com.mycompany.main;
-
-public class Motocicleta extends Vehiculo {
-    private String marca;
-    private String modelo;
-    private int NumerodePuertas;
-    private double TamañoRueda ;
-    private int VelocidadMaximaM ;
+public class Motocicleta extends Vehiculo  {
     
-    public Motocicleta(String marca , String modelo){
-        this.marca = marca;
-        this.modelo = modelo;
-        this.NumerodePuertas = 0;
-        this.TamañoRueda = 0;
-        
-        
+    private int tamañoRueda;
+    
+    public Motocicleta(String marca,String modelo,int velocidadMaxima,int tamañoRueda){
+        super(marca,modelo,velocidadMaxima);
+        this.tamañoRueda = 0;
     }
-    
-    @Override
+   @Override
     public void Mover(){
-        System.out.println("El vehiculo está acelerando");
-    }
-    public void Detenerse(){
-        System.out.println("El coche esta Detenido ");
-        
-    }
+       System.out.println("La motocicleta está rugiendo mientras acelera");
+    } 
+    
+   
 }
