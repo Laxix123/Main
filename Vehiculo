@@ -1,11 +1,24 @@
 package com.mycompany.main;
 
 public class Vehiculo {
-    private String marca ;
-    private String modelo;
-    private int VelocidadMaxima;
+    private String Marca ;
+    private String Modelo;
+    private int velocidadMaxima;
+    
+    public Vehiculo(String marca,String modelo,int velocidadMaxima){
+        this.Marca = marca;
+        this.Modelo = modelo;
+        this.velocidadMaxima = velocidadMaxima ;
+    }
+    
+    
     public void Mover(){
+        System.out.println("El Vehículo está en movimiento");
+    }
+    public void MostrarDetalles(){
+        System.out.println("La marca es " + Marca);
+        System.out.println(" El Modelo es : " + Modelo);
+        System.out.println(" La Velocidad Maxima es : " + velocidadMaxima);
         
-        System.out.println(" El Vehiculo está en movimiento");
     }
 }
