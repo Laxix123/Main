@@ -1,24 +1,21 @@
 package com.mycompany.main;
-public class Coche extends Vehiculo {
-    private String marca;
-    private String modelo;
-    private int NumerodePuertas =0;
-    private double TamañoRueda =0;
-    private int VelocidadMaxima;
+
+public class Coche extends Vehiculo{
     
-    public Coche(String marca , String modelo){
-        this.marca = marca;
-        this.modelo = modelo;
-        this.NumerodePuertas = 0;
-        this.TamañoRueda = 0;
+    private int numeroPuertas;
+    
+    public Coche(String marca,String modelo,int numeroPuertas,int velocidadMaxima){
+        super(marca,modelo,velocidadMaxima);
+        this.numeroPuertas = numeroPuertas;  
     }
-    
     @Override
+    
     public void Mover(){
-        System.out.println("El vehiculo está acelerando");
+        System.out.println("El coche esta acelerando");
     }
-    public void Detenerse(){
-        System.out.println("El coche esta Detenido ");
-        
+    public void MostrarCoche (){
+        System.out.println(" El número de puertas del Coche es : " + numeroPuertas);
     }
+   
 }
+
